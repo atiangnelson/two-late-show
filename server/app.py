@@ -8,6 +8,9 @@ db = SQLAlchemy()
 migrate = Migrate()
 jwt = JWTManager()
 
+
+
+
 def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
@@ -27,3 +30,6 @@ def create_app():
     app.register_blueprint(auth_bp)
 
     return app
+
+    app = create_app()
+
